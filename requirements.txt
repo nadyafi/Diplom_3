@@ -1,0 +1,4 @@
+pytest~=8.2.1
+selenium~=4.21.0
+seletools~=1.5.0
+requests~=2.32.3

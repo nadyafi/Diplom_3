@@ -4,10 +4,11 @@ from selenium.webdriver.common.by import By
 
 
 class RestorePage(BasePage):
-    RESTORE_PASSWORD_TEXT = [By.XPATH, '//*[@id="root"]/div/main/div/h2']
+    RESTORE_PASSWORD_TEXT = [By.XPATH, "//h2[text()='Восстановление пароля']"]
     RESTORE_EMAIL_INPUT = [By.XPATH, '//*[@class="text input__textfield text_type_main-default"]']
     RESTORE_BUTTON = [By.XPATH,
-                      "//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa' and text() = 'Восстановить']"]
+                      "//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx "
+                      "button_button_size_medium__3zxIa' and text() = 'Восстановить']"]
     CODE_INPUT = [By.XPATH, '//*[@class="input pr-6 pl-6 input_type_text input_size_default"]']
     RESTORE_PASSWORD_ACTIVE_INPUT = [By.XPATH,
                                      './/div[@class="input pr-6 pl-6 input_type_text input_size_default '

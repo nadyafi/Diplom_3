@@ -13,25 +13,9 @@ from pages.account_page import AccountPage
 from helpers import generate_new_user_data, create_order_by_api
 
 
-# @pytest.fixture(params=['firefox', 'chrome'])
-# def driver(request):
-#     driver = None
-#
-#     if request.param == 'firefox':
-#         driver = webdriver.Firefox()
-#         driver.implicitly_wait(10)
-#     elif request.param == 'chrome':
-#         driver = webdriver.Chrome()
-#         driver.implicitly_wait(10)
-#
-#     yield driver
-#     driver.quit()
-
-
 @pytest.fixture(scope="function")
 def driver():
     driver = webdriver.Chrome()
-    driver.implicitly_wait(10)
     yield driver
     driver.quit()
 
